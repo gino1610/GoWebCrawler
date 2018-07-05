@@ -18,3 +18,13 @@ Parse the Webpage response and extract links (this will go in ParseLinks functio
 - Once the crawling is complete (based on a user stopping the process or limiting to number of url page links or some metric ---- I have not yet thought through on this), a report would be generated for now (a sample output file is attached to this email). Later on, the results could be either stored in a flat file or a database so that the user could query and get specific results).
 
 - And I will continue to fix/update/refine the application.
+
+
+- The application first parses the robots.txt file and uses the SiteMap directive to build the Sitemap output. 
+- This application ignores all other directives (like User-agent, Allow, Disallow, Crawl-Delay, Host) in robots.txt file 
+- This application ignores zipped/gzipped Sitemap files (Sitemap.xml.gz files) in the robots.txt file (example: https://www.yahoo.com/robots.txt)
+
+
+
+
+- This page simply relies on sitemap.xml at the top level (www.redhat.com/sitemap.xml)
